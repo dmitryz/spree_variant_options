@@ -1,6 +1,7 @@
 module SpreeVariantOptions
   class VariantConfiguration < Spree::Preferences::Configuration
     preference :allow_select_outofstock, :boolean, :default => false
+    preference :force_instock, :boolean, :default => false
     preference :default_instock, :boolean, :default => false
     preference :option_value_url, :string, :default => '/spree/option_values/:id/:style/:basename.:extension'
     preference :option_value_path, :string, :default => ':rails_root/public/spree/option_values/:id/:style/:basename.:extension'
