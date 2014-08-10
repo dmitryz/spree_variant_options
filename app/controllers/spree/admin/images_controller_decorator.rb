@@ -41,6 +41,7 @@ Spree::Admin::ImagesController.class_eval do
   private
 
   def create_image(variant, image_attributes)
+    puts permitted_resource_params.to_json
     image = Spree::Image.new(permitted_resource_params)
     image.viewable_type = 'Spree::Variant'
     image.viewable_id = variant.id
