@@ -8,7 +8,7 @@ Spree::Variant.class_eval do
     {
       :id    => self.id,
       :in_stock => self.in_stock?,
-      :price => number_to_currency(actual_price, unit: Spree::Config[:currency])
+      :price => self.price_in(Spree::Config[:currency]).money
     }
   end
 
